@@ -1,5 +1,5 @@
 # 게임 화면 크기와 보드 관련 상수
-WIDTH, HEIGHT = 800, 800  # 창 크기
+WIDTH, HEIGHT = 700, 700  # 창 크기
 BOARD_SIZE = 15  # 15x15 오목판
 CELL_SIZE = (WIDTH - 140) // BOARD_SIZE  # 각 칸의 크기
 BOARD_PADDING = 70  # 보드 주변 여백

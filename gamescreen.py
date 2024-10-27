@@ -135,3 +135,18 @@ class Gamescreen:
             if 0 <= row < BOARD_SIZE and 0 <= col < BOARD_SIZE:
                 return row, col
         return None
+
+    def update_screen(self, board,game_state, current_player, winner, hover_button):
+        # Screen update
+        self.screen.fill(BACKGROUND)
+        self.draw_board()
+        self.draw_stones(board)
+        self.draw_status_bar(game_state, current_player, winner)
+
+        # Draw buttons with hover effect
+        self.draw_button("Save Game", self.save_button, hover_button == "save")
+        self.draw_button("Load Game", self.load_button, hover_button == "load")
+        self.draw_button("New Game", self.new_game_button, hover_button == "new")
+
+        # Update the display
+        pygame.display.flip()
